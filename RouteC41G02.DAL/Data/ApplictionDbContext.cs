@@ -10,12 +10,29 @@ using System.Threading.Tasks;
 
 namespace RouteC41G02.DAL.Data
 {
-    internal class ApplictionDbContext:DbContext
+
+
+    public class ApplictionDbContext:DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //public ApplictionDbContext()
+        //{
+
+        //}
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //=> optionsBuilder.UseSqlServer("");
+        
+        public ApplictionDbContext(DbContextOptions<ApplictionDbContext>options) : base (options)
+            
+        { 
+        
+        
+        
+        
+        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         
             
-            =>optionsBuilder.UseSqlServer("Server=.;Database =MVCApplictionG02;Trusted_Connection=True;MultipleActiveResultsets=False");
+        //    =>optionsBuilder.UseSqlServer("Server=.;Database =MVCApplictionG02;Trusted_Connection=True;MultipleActiveResultsets=False");
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -26,7 +43,7 @@ namespace RouteC41G02.DAL.Data
         }
 
 
-        public DbSet<Department>Departments { get; set; }
+        public DbSet<Department> Departments { get; set; }
 
 
 
