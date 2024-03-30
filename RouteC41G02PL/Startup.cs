@@ -28,7 +28,7 @@ namespace RouteC41G02PL
             services.AddControllersWithViews();  //Regesrer Build in  server Requard by mvc 
 
             // services.AddTransient < ApplictionDbContext> ();
-            services.AddScoped<ApplictionDbContext>();
+           // services.AddScoped<ApplictionDbContext>();
             //services.AddSingleton<ApplictionDbContext>();
             services.AddDbContext<ApplictionDbContext>(OPtions=>
                         
@@ -40,7 +40,7 @@ namespace RouteC41G02PL
            
 
 
-            services.AddScoped<DbContextOptions<ApplictionDbContext>>();
+            //services.AddScoped<DbContextOptions<ApplictionDbContext>>();
             // ContextLifetime:Serv
 
 
