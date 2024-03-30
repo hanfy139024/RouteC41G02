@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace RouteC41G02PL
 {
-    public class Startup
+    public class Startup 
     {
         public IConfiguration Configuration { get; } = null;
 
@@ -35,14 +35,17 @@ namespace RouteC41G02PL
             {
                 OPtions.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
-            
-            
-            
-            
+
+
+           
+
 
             services.AddScoped<DbContextOptions<ApplictionDbContext>>();
-           // ContextLifetime:Serv
+            // ContextLifetime:Serv
 
+
+
+         
 
 
         }
