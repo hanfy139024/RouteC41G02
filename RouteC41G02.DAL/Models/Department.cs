@@ -15,8 +15,8 @@ namespace RouteC41G02.DAL.Models
         public string Name { get; set; }
         [Required]
         public string Code { get; set; }
-        public DateTime Dateofcreation { get; set; }
-
-         
+        
+        [Display(Name ="Date of Creation")]
+         public DateTime Dateofcreation { get; set; }
     }
 }
