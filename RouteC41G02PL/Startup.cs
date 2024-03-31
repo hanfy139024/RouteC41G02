@@ -64,6 +64,7 @@ namespace RouteC41G02PL
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
 
             app.UseRouting();
