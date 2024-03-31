@@ -16,6 +16,24 @@ namespace RouteC41G02PL.Controllers
         {
            var departments = _departmentRepo.GetAll();
             return View(departments);
+
+        }
+        [HttpGet]
+        public IActionResult Create() { 
+        
+         return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Department department)
+        {
+          if(ModelState.IsValid)
+            {
+                var Count = _departmentRepo.Add(department);
+                    if(Count > 0)
+                    return RedirectToAction(nameof(Index));
+
+            }
+          return View(department);
         }
     }
 }

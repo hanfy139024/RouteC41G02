@@ -1,0 +1,33 @@
+﻿@using RouteC41G02.DAL.Models
+@model Department
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create New Department </h1>
+
+<br />
+<br />
+H
+<form asp-action="Create">
+    <div class=" form-group">
+        <label class="col-form-label" asp for=" Code"></label>
+        <input asp-for="Code"Class ="from-control" />
+        <span asp-validation-for="Code"class="text-danger"></span>
+
+    </div>
+    <div class=" form-group">
+        <label class="col-form-label"asp for=" name"></label>
+        <input asp-for="Name" Class="from-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+
+    </div>
+    <div class=" form-group">
+        <label class="col-form-label" asp for="DateofCreation "></label>
+        <input asp-for="Dateofcreation" Class="from-control" />
+        <span asp-validation-for="Dateofcreation" class="text-danger"></span>
+
+    </div>
+    <input type="submit"value="Creat"class="btn btn-primary" />
+    <a asp-action="Index"class="btn btn-light">Back of thelist</a>
+</form>
