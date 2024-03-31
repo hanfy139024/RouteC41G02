@@ -45,9 +45,10 @@ namespace RouteC41G02.DAL.Data
 
         public DbSet<Department> Departments { get; set; }
 
-
-
-
+        public static implicit operator ApplicationException(ApplictionDbContext v)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }
