@@ -30,6 +30,7 @@ namespace RouteC41G02PL
             // services.AddTransient < ApplictionDbContext> ();
            // services.AddScoped<ApplictionDbContext>();
             //services.AddSingleton<ApplictionDbContext>();
+
             services.AddDbContext<ApplictionDbContext>(OPtions=>
                         
             {
